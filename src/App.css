@@ -1,38 +1,120 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-content: center;
+  /* background-color: rgb(80, 16, 74); */
+  background-color: rgb(48, 47, 47);
+  font-family: "Libre Franklin";
+  font-family: "Big Shoulders Inline Display", cursive;
+  font-family: "Noto Sans", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
 .App {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-inline: 100px;
+  margin-block: 40px;
+  place-content: center;
+  background-color: #fff;
+  max-width: 80rem;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  .App {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+.next-up-block {
+  margin: 50px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.members {
+  margin: 50px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  text-align: center;
+  align-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+th {
+  text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.button {
+  display: grid;
+  background-color: rgb(80, 16, 74);
+  width: 100px;
+  height: 35px;
+  color: #fff;
+  place-content: center;
+  border-radius: 5px;
+  transition: background-color 300ms;
+}
+
+.button:hover {
+  background-color: rgba(80, 16, 74, 0.8);
+}
+
+.member-card {
+  display: grid;
+  grid-template-columns: 2fr 8fr 1fr;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgb(245, 245, 245);
+  margin: 5px;
+  width: 300px;
 }
 
-.App-link {
-  color: #61dafb;
+.member-card:hover {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.432);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.member-card img {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+.member-info {
+  line-height: 7px;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.next-up-card img {
+  height: 200px;
+  width: auto;
+  aspect-ratio: 1;
+  border-radius: 100px;
+  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.432);
+  transition: 300ms;
+}
+
+.next-up-card:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.432);
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: 200;
+}
+
+.subtext {
+  font-size: 0.7rem;
 }
